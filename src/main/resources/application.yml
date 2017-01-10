@@ -1,0 +1,32 @@
+security:
+  user:
+    name: broker
+    password: broker 
+    
+catalog.services:
+ - name: catalogService
+   description: Service that returns a catalog of products
+   plans: basic
+   tags: webservice, rest
+   credentials:
+     uri: http://catalog.com
+     authentication: bearer 343435353
+     
+
+ - name: availabilityService
+   description: Service that returns availability of products in stock
+   plans: default
+   tags: webservice, soap
+   credentials:
+     uri: http://available.com
+     authentication: bearer 343435353
+     
+
+ - name: pricingService
+   description: Service that returns pricing of products 
+   plans: default
+   tags: webservice, protobuf
+   credentials:
+     uri: http://pricing.com
+     authentication: bearer 343435353
+    

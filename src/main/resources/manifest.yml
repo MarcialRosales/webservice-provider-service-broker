@@ -1,0 +1,5 @@
+---
+applications:
+- name: broker-service
+  host: broker-service
+  path: '@project.build.finalName@.jar'
